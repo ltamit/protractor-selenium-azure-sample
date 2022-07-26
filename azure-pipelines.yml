@@ -10,8 +10,8 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-  LT_USERNAME: 'Your LambdaTest Username'
-  LT_ACCESS_KEY: 'Your LambdaTest Access Key'
+  LT_USERNAME: 'Your_LambdaTest_Username'
+  LT_ACCESS_KEY: 'Your_LambdaTest_Access_Key'
 
 steps:
 - task: NodeTool@0
@@ -23,5 +23,5 @@ steps:
     npm install
     npm install -g protractor
     cd conf
-    protractor single.conf.js
+    protractor parallel.conf.js  //for executing parallel testing
   displayName: 'npm install and build'
